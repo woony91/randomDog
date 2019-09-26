@@ -11,12 +11,11 @@ function getDogImage(numberOfDogs = 3) {
 function displayResults(responseJson) {
     console.log(responseJson);
     //replace the existing image with the new one
-    $('.results').html(<h2>Here you go!</h2>)
+    $('.results').html(`<h2>Here you go!</h2>`);
         for (let dog of responseJson.message) {
             $('.results').append(
             `<img src="${dog}" class="results-img" width="200" height="auto">`);
           }
-    )
     //display the results section
     $('.results').removeClass('hidden');
   }
